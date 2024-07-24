@@ -10,5 +10,5 @@ export default async function asyncUploadUser() {
     console.error('Error:', error);
   }
   
-  return queue;
+  return obj;
 }
