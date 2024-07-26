@@ -1,10 +1,6 @@
 export default class Building {
   constructor(sqft) {
     this._sqft = Building._validateNumber(sqft, 'Sqft');
-
-    if (new.target === Building) {
-      throw new Error('Building is an abstract class and cannot be instantiated directly');
-    }
   }
 
   static _validateNumber(val, attr) {
