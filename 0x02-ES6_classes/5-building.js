@@ -14,7 +14,8 @@ export default class Building {
     return this._sqft;
   }
 
-  static evacuationWarningMessage() {
+  evacuationWarningMessage() {
+    console.log(this._sqft);
     throw new Error('Class extending Building must override evacuationWarningMessage');
   }
 }
