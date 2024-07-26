@@ -14,6 +14,10 @@ export default class Building {
     return this._sqft;
   }
 
+  set sqft(val) {
+    this._sqft = Building._validateNumber(val, 'Sqft');
+  }
+
   evacuationWarningMessage() {
     console.log(this._sqft);
     throw new Error('Class extending Building must override evacuationWarningMessage');
