@@ -19,6 +19,14 @@ export default class Currency {
     this._code = Currency._validateString(val, 'Code');
   }
 
+  get name() {
+    return this._name;
+  }
+
+  set name(val) {
+    this._name = Currency._validateString(val, 'Name');
+  }
+
   displayFullCurrency() {
     return `${this._name} (${this._code})`;
   }
