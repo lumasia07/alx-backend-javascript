@@ -15,7 +15,7 @@ export default class Pricing {
 
   static _validateCurrency(val, attr) {
     if (!(val instanceof Currency)) {
-      throw new TypeError(`${attr} must be an instance of currency`);
+      throw new TypeError(`${attr} must be an instance of Currency`);
     }
     return val;
   }
@@ -33,7 +33,7 @@ export default class Pricing {
   }
 
   set currency(val) {
-    this._amount = Pricing._validateCurrency(val, 'Currency');
+    this._currency = Pricing._validateCurrency(val, 'Currency');
   }
 
   displayFullPrice() {
