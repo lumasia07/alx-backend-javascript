@@ -26,7 +26,7 @@ export default class Car {
 
   cloneCar() {
     const clonedCar = Object.create(Object.getPrototypeOf(this));
-    Object.getOwnPropertyNames(this).forEach(prop => {
+    Object.getOwnPropertyNames(this).forEach((prop) => {
       clonedCar[prop] = this[prop];
     });
     return clonedCar;
