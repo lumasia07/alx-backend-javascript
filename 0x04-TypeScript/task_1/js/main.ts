@@ -10,7 +10,7 @@ interface Teacher {
 };
 
 // Defines an interface for class Director that extends Object Teacher (Task 2)
-interface Director extends Teacher {
+export interface Director extends Teacher {
   numberOfReports: number;
 }
 
@@ -19,14 +19,14 @@ interface PrintTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Function to print Initial for firstName and full Lastname (Tasj 3)
-const PrintTeacher: PrintTeacherFunction = (firstName, lastName) => {
+// Function to print Initial for firstName and full Lastname (Task 3)
+export const PrintTeacher: PrintTeacherFunction = (firstName, lastName) => {
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
 // Defines a class Student (Task 4)
 // Constructur description interface
-interface StudentConstructor {
+export interface StudentConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
 
@@ -37,7 +37,7 @@ interface StudentClassInterface {
 }
 
 // Implementing the class
-class StudentClass implements StudentClassInterface {
+export class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
 
